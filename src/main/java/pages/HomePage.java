@@ -50,6 +50,21 @@ public class HomePage {
         return new FileUploadPage(driver);
     }
 
+    public ContextMenuPage clickContextMenuPage(){
+        clickLink("Context Menu");
+        return new ContextMenuPage(driver);
+    }
+
+    public WysiwygEditorPage clickWYSIWYGEditor(){
+        clickLink("WYSIWYG Editor");
+        return new WysiwygEditorPage(driver);
+    }
+
+    public FramesPage clickFrames(){
+        clickLink("Frames");
+        return new FramesPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
